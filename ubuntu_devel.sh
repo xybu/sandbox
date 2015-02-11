@@ -5,8 +5,9 @@ sudo apt-get -y install build-essential cmake automake gcc g++ gdb valgrind nemi
 # sudo apt-get -y install openjdk-7-jdk 
 
 # Install GGCov
-sudo apt-get -y install libglade2-0 libgnomeui-0 binutils
-sudo apt-get install libgtk+2.0 libgtkmm-2.4-dev glib-2.0 libxml
+sudo apt-get -y install libglade2-dev libgnomeui-dev binutils
+# sudo apt-get install libgtk+2.0 libgtkmm-2.4-dev
+sudo apt-get install libglib2.0-dev libxml
 cd /tmp
 wget http://iweb.dl.sourceforge.net/project/ggcov/ggcov-0.9.tar.gz
 tar xvf ggcov-0.9.tar.gz && cd ggcov-0.9
