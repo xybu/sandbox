@@ -2,4 +2,7 @@
 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get -y install build-essential cmake automake gcc g++ gdb valgrind nemiver curl vim-gtk gawk ssh libcurl4-openssl-dev python-software-properties software-properties-common
+sudo apt-get -y install p7zip-full
 # sudo apt-get -y install openjdk-7-jdk 
+# sudo apt-get -y install nautilus-dropbox
+# sudo apt-get -y install idle3
