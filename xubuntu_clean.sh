@@ -6,3 +6,5 @@ sudo apt-get -y autoremove xubuntu-community-wallpapers
 sudo apt-get -y autoremove xchat simple-scan xfburn
 sudo apt-get -y autoremove xserver-xorg-video-s3 xserver-xorg-video-savage xserver-xorg-video-sisusb
 sudo apt-get -y autoremove xserver-xorg-input-wacom xserver-xorg-video-ati xserver-xorg-video-trident xserver-xorg-video-r128
+sudo apt-get clean
+sudo apt-get autoclean
