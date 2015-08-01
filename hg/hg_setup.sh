@@ -14,6 +14,7 @@ cd /tmp
 
 # Install hg-github
 sudo pip install -U hg-github
+sudo pip install hg-git
 
 # Install hg-histedit
 hg clone ssh://hg@bitbucket.org/durin42/histedit
