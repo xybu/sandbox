@@ -13,7 +13,7 @@ if not conf.has_section('extensions'):
 	conf.add_section('extensions')
 	print('Added section "extensions"')
 
-extensions = ['histedit', 'hggithub', 'smartlog', 'githelp', 'backups', 'fbamend', 'chistedit']
+extensions = ['histedit', 'hggithub', 'smartlog', 'githelp', 'backups', 'fbamend', 'chistedit', 'hggit', 'hgext.bookmarks']
 for ext in extensions:
 	if not conf.has_option('extensions', ext):
 		conf.set('extensions', ext, '')
