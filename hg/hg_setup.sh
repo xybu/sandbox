@@ -13,7 +13,6 @@ sudo apt-get install mercurial python-dev python-pip
 cd /tmp
 
 # Install hg-github
-sudo pip install -U hg-github
 sudo pip install hg-git
 
 # Install hg-histedit
