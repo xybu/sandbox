@@ -13,7 +13,7 @@ if not conf.has_section('extensions'):
 	conf.add_section('extensions')
 	print('Added section "extensions"')
 
-extensions = ['histedit', 'smartlog', 'githelp', 'backups', 'fbamend', 'chistedit', 'hggit', 'hgext.bookmarks']
+extensions = ['histedit', 'smartlog', 'githelp', 'backups', 'fbamend', 'chistedit', 'hggit', 'hgext.bookmarks', 'color']
 for ext in extensions:
 	if not conf.has_option('extensions', ext):
 		conf.set('extensions', ext, '')
@@ -26,6 +26,9 @@ if not conf.has_section('alias'):
 if not conf.has_option('alias', 'sl'):
 	conf.set('alias', 'sl', "smartlog --template \"{shortest(node)}  {author|user}  {bookmarks % '{ifeq(bookmark, current, label(\\\"yellow\\\", \\\" {bookmark}*\\\"), label(\\\"green\\\", \\\" {bookmark}\\\"))}'} {ifeq(branch, 'default', '', label(\\\"bold\\\", branch))}\\n{desc|firstline}\\n\\n\"")
 	print('Added option alias.sl')
+
+if not conf.has_option('color', 'mode'):
+	conf.set('color', 'mode', 'auto')
 
 with open(os.path.expanduser('~/.hgrc'), 'wb') as f:
 	conf.write(f)
