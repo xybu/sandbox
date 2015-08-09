@@ -9,19 +9,16 @@ import ConfigParser
 conf = ConfigParser.ConfigParser(allow_no_value=True)
 conf.readfp(open(os.path.expanduser('~/.hgrc')))
 
-if not conf.has_section('extensions'):
-	conf.add_section('extensions')
-	print('Added section "extensions"')
+for s in ['extensions', 'alias', 'color']:
+	if not conf.has_section(s):
+		conf.add_section(s)
+		print('Added section "' + s + '"')
 
 extensions = ['histedit', 'smartlog', 'githelp', 'backups', 'fbamend', 'chistedit', 'hggit', 'hgext.bookmarks', 'color']
 for ext in extensions:
 	if not conf.has_option('extensions', ext):
 		conf.set('extensions', ext, '')
 		print('Added option "extensions.%s"' % ext)
-
-if not conf.has_section('alias'):
-	conf.add_section('alias')
-	print('Added section "alias"')
 
 if not conf.has_option('alias', 'sl'):
 	conf.set('alias', 'sl', "smartlog --template \"{shortest(node)}  {author|user}  {bookmarks % '{ifeq(bookmark, current, label(\\\"yellow\\\", \\\" {bookmark}*\\\"), label(\\\"green\\\", \\\" {bookmark}\\\"))}'} {ifeq(branch, 'default', '', label(\\\"bold\\\", branch))}\\n{desc|firstline}\\n\\n\"")

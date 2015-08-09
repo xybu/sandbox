@@ -1,13 +1,12 @@
 #!/bin/bash
 
-function append_if_missing {
-	if ! 
-}
-
 # Install Mercurial
 # mercurial for hg
 # python-dev for Python.h
 # python-pip for pip2
+
+current_dir=`pwd`
+
 sudo apt-get install mercurial python-dev python-pip
 
 cd /tmp
@@ -31,4 +30,5 @@ sudo python setup.py install
 cd ..
 sudo rm -rf hg-experimental
 
+cd $current_dir
 python ./hg_setup_hgrc.py
