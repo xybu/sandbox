@@ -1,2 +1,4 @@
 sublimelinter
 EncodingHelper
+MonokaiExtended
+PrettyJSON
