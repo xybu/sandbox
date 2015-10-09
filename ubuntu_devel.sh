@@ -11,4 +11,3 @@ sudo apt-get -y install openjdk-8-jdk
 sudo apt-get -y install git mercurial
 alias vi=vim
 git config --global core.editor vim
-hg --config ui.editor vim
