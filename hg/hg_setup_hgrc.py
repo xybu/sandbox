@@ -9,7 +9,7 @@ import ConfigParser
 conf = ConfigParser.ConfigParser(allow_no_value=True)
 conf.readfp(open(os.path.expanduser('~/.hgrc')))
 
-for s in ['extensions', 'alias', 'color']:
+for s in ['extensions', 'alias', 'color', 'ui']:
 	if not conf.has_section(s):
 		conf.add_section(s)
 		print('Added section "' + s + '"')
@@ -26,6 +26,9 @@ if not conf.has_option('alias', 'sl'):
 
 if not conf.has_option('color', 'mode'):
 	conf.set('color', 'mode', 'auto')
+
+if not conf.has_option('ui', 'editor'):
+	conf.set('ui', 'editor', 'vim')
 
 with open(os.path.expanduser('~/.hgrc'), 'wb') as f:
 	conf.write(f)
