@@ -3,3 +3,6 @@ EncodingHelper
 MonokaiExtended
 PrettyJSON
 All Autocomplete
+Makefile Improved
+C++ Starting Kit
+C Improved
