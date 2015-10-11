@@ -2,3 +2,4 @@ sublimelinter
 EncodingHelper
 MonokaiExtended
 PrettyJSON
+All Autocomplete
