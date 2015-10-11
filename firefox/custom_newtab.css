@@ -2,62 +2,48 @@
 @-moz-document url("about:newtab") {
 
 #newtab-customize-button {display: none !important;}
-#newtab-intro-what {display: none !important;}    
-#newtab-search-container {display: none !important;} /* search bar */
-.newtab-title{display: none !important;} /* page name */
-.newtab-link:hover .newtab-title {display: block !important;} /* show page name on hover */
+#newtab-search-container {display: none !important;}
 
-/* speeddial position and area */
+#newtab-scrollbox:not([page-disabled]) {
+    background-color: #B6B6B6;
+    color: rgb(0, 0, 0);
+}
+
 #newtab-grid{
     max-width: 1200px !important;
     max-height: 540px !important;
     margin-top: 20px;
 }
 
-/* speeddial cell position and size */
 #newtab-grid > .newtab-cell{
     width: 250px;
     height: 155px;
     margin: 10px 10px;
 }
 
-/*no radius on speeddial cell*/
-.newtab-link {
-    border-radius: 0;
+.newtab-cell,.newtab-link,.newtab-thumbnail {
+    border-radius: 0.5em;
 }
 
-/* transparency of thumbs */
-.newtab-thumbnail{opacity: 0.85 !important;}   
-.newtab-cell:hover .newtab-thumbnail{opacity: 1 !important;}
-
-/* decorate site border */
 .newtab-site {
-  border-radius: inherit;
-  text-decoration: none;
-  transition-property: top, left, opacity, box-shadow, background-color;
-  box-shadow: none;
+  box-shadow: none !important;
   border:none !important;
 }
-
-/* border on hover */
-.newtab-cell:not([ignorehover]) > .newtab-site:hover, .newtab-site[dragged] {
-    border: 3px solid #7E7E7E;
-    box-shadow: 0 0px 0px 0px #E2E3E4;
-    margin: -2px;
-    border-radius: 0;
+    
+.newtab-cell:not([ignorehover]) .newtab-control:hover ~ .newtab-link,
+.newtab-cell:not([ignorehover]) .newtab-link:hover,
+.newtab-site[dragged] {
+  box-shadow: none !important;
+  border:none !important;
+  margin: -2px;
 }
 
-/* text color */
 #newtab-intro-what, .newtab-sponsored, .newtab-title {color: #E6E6E6;}
 
-/* site name */
 .newtab-title {
     background-color: rgba(25, 25, 25, 0.55) !important;
     color:white!important;
-    font-size:13px!important;
     text-align:left !important;
-    top:134px;
-    bottom:auto!important;
     line-height:25px!important;
     padding:0px 10px!important;
 }
@@ -65,15 +51,8 @@
     display:none!important;
 }
 
-/* search bar */
- {
-  display:none;
+.newtab-thumbnail {
+  height: auto;
 }
-#newtab-search-form,
-#newtab-search-logo,
-#newtab-search-text,
-#newtab-search-icon {
-    display:none;
+    
 }
-
-} 
