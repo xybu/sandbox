@@ -21,3 +21,6 @@ echo "verbose = True" >> ~/.hgrc
 git config --global user.name "Xiangyu Bu"
 git config --global user.email "xybu92@live.com"
 git config --global core.editor vim
+
+# Configure Python
+wget -O- https://bootstrap.pypa.io/get-pip.py | sudo python
