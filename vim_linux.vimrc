@@ -3,5 +3,5 @@ set ruler
 set showcmd
 set nobackup
 set noswapfile
-colorscheme evening
+colorscheme elflord
 set guifont=Monospace\ 14
