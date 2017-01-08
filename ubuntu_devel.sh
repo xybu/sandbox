@@ -10,6 +10,8 @@ sudo apt-get -y install openjdk-8-jdk
 # sudo apt-get -y install nautilus-dropbox
 # sudo apt-get -y install idle3
 sudo apt-get -y install git mercurial
+sudo apt-get -y install mosh tmux
+sudo apt-get -y install python-dev python3-dev
 alias vi=vim
 
 # Configure Mercurial
